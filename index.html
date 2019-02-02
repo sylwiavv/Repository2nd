@@ -23,7 +23,6 @@ integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="my-script.js"></script>
 </head>
 <body>
 
@@ -44,14 +43,15 @@ integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b
       <hr>
       <!--Navigation page-->
 
-      <nav class="navbar navbar-expand-lg navbar-light " style="background-color:white;">
+      <nav class="navbar navbar-expand-lg navbar-light" id="mainMenu" style="background-color:white;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
         aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon" style="cursor:pointer" ></span>
         </button>
 
         <div class="collapse navbar-collapse navbar-light " id="navbarTogglerDemo03">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navbar-brand">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navbar-brand" id="menuList">
+            
             <li class="nav-item">
               <a class="nav-link" href="#">Home</a>
             </li>
@@ -226,8 +226,8 @@ integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b
 
 <div class="posts">
 
-    <h4>From the blog</h4>
-    <h2>Post title</h2>
+    <h6>From the blog</h6>
+    <h4>Post title</h4>
     <time>Friday April-11-2019</time>
     <p class=""></p>
     <p>
@@ -256,45 +256,40 @@ integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b
 </ul>
 
 
-<div class="newsletter">
+<form class="newsletter" action="action_page.php">
   <h4>Newsletter</h4>
   <p>Amet nullam fringilla nibh nulla convallis
   ut venenatis purus</p>
-<input type="text" placeholder="Name" name="name" required>
-    <input type="text" placeholder="Email address" name="mail" required>
+    <input class="newsletter__input newsletter__input--name" type="text" placeholder="Name" name="name" required>
+    <input class="newsletter__input newsletter__input--email" type="text" placeholder="Email address" name="mail" required>
     <label>
-      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
-      <button class="btn" type="submit" name="button">SUBMIT</button>
+
+
+    <button class="newsletter__button newsletter__button--subscribe btn" type="submit" type="button" value="Subscribe">Subscribe</button>
+    <input class="newsletter__input--daily " type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+
     </label>
-    <h4>Contakt Us</h4>
-    <p>Telephon:(+46) 566 776 776</p>
-    <p>Email: memale@gmail.com</p>
+
+</form>
+<!--CONTACT US-->
+<div class="contact">
+<h4>Contakt Us</h4>
+<p>Telephon:(+46) 566 776 776</p>
+<p>Email: memale@gmail.com</p>
 </div>
 
+<!--COPYRIGT-->
 <div class="copyright">
       <small>&copy; Copyright 2058, Example Corporation</small>
 </div>
+
 <a id="back2Top" title="Back to top" href="#"></a>
-
-
 
   </section>
 
 </div>
+<script type="text/javascript" href="scripts.js"></script>
 
-<script>
-  // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 140 || document.documentElement.scrollTop > 140) {
-    document.getElementById("back2Top").style.display = "block";
-  } else {
-    document.getElementById("back2Top").style.display = "none";
-  }
-}
-
-</script>
 
     </body>
 
